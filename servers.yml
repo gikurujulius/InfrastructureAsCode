@@ -1,5 +1,5 @@
 Description: >
-    Magnim AWILI / Udacity Project 2 2019
+    Julius Gikuru / Udacity Project 2 2022
 Parameters:
   EnvironmentName:
     Description: An Environment name that will be prefixed to resources
@@ -52,13 +52,12 @@ Resources:
           #!/bin/bash
           apt-get update
           apt-get install apache2 -y
-          mv /var/www/html/index.html /var/www/html/index_old.html
-          wget -P /var/www/html https://project2udacity.s3-us-west-2.amazonaws.com/index.html
+          echo "Hello World" > /var/www/html/index.html
           systemctl start apache2.service
-      ImageId: ami-005bdb005fb00e791
+      ImageId: ami-052efd3df9dad4825
       SecurityGroups:
       - Ref: WebServerSecurityGroup
-      InstanceType: t3.small
+      InstanceType: t2.medium
       BlockDeviceMappings:
       - DeviceName: "/dev/sdk"
         Ebs:
