@@ -7,7 +7,7 @@ Project 2 - Deploy a high-availability web app using CloudFormation = Deploy Inf
 
 To spin up a new stack you can run the create.sh followed by the stack name
 
-./create.sh network.yaml
+./create.sh network.yml
 
 Parameters are stored in network-parameters.json to avoid hard coding parameter values.
 
